@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+	<server name="game" address="0.0.0.0" port="6100">
+		<dispatcher class="app.net.ProtoDispatcher" />
+		
+		<!-- 基础消息服务定义 -->
+		<servlet desc="连接握手服务" class="app.net.ShakeHandesServlet" />
+		
+		<servlet desc="测试用" class="app.game.login.TestLoginServlet" />
+
+	</server>
+	<server name="manager" address="0.0.0.0" port="5100">
+		<dispatcher class="app.net.ProtoDispatcher" />
+
+	</server>
+</manifest>
